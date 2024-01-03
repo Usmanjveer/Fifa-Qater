@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Live Soccer</string>
+    <string name="n_home">Live Events</string>
+    <string name="n_contact">Videos</string>
+    <string name="n_profile">Upcoming</string>
+
+
+</resources>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:hwads="http://schemas.android.com/apk/res-auto"
+    tools:context=".Second">
+
+    <!-- Include your custom toolbar layout -->
+    <include
+        layout="@layout/custom_toolbar2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <!-- Button container layout -->
+
+    <!-- WebView -->
+    <WebView
+        android:id="@+id/webView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="56dp"
+        android:layout_below="@id/scrool"
+        android:layout_above="@+id/hw_banner_viewS"/>
+
+    <!-- Banner Ad -->
+    <com.huawei.hms.ads.banner.BannerView
+        android:id="@+id/hw_banner_viewS"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        hwads:adId="testw6vs28auh3"
+        hwads:bannerSize="BANNER_SIZE_320_50"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"/>
+
+    <!-- Loading Animation View -->
+    <LinearLayout
+        android:id="@+id/llLoadingS"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="56dp"
+        android:background="#FFFFFF"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="150dp"
+        android:visibility="visible">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/footload" />
+
+    </LinearLayout>
+</RelativeLayout>
